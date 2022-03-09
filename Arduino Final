@@ -1,0 +1,33 @@
+#include <SoftwareServo.h> 
+//#include <Servo.h>
+int echoPin =PB0;
+int trigPin =PB2;
+SoftwareServo Myservo;
+int pos;
+int long duration;
+int distance;
+void setup(){ 
+Myservo.attach(PB1);
+pinMode(echoPin,INPUT);
+pinMode(trigPin,OUTPUT);
+}
+void loop()
+{
+digitalWrite(trigPin,LOW);
+delayMicroseconds(2); 
+digitalWrite(trigPin,HIGH);
+delayMicroseconds(10); 
+digitalWrite(trigPin,LOW);
+duration=pulseIn(echoPin,HIGH);
+distance=(duration*0.034/2);
+  if(distance<=80){
+    for(pos=180;pos>=0;pos--)
+ Myservo.write(pos);
+      delay(111.1);
+    }
+}
+  else{
+      Myservo.write(180);
+  }
+  delay(20);
+}
