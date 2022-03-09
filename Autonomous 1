@@ -1,0 +1,27 @@
+int main() {
+  // Initializing Robot Configuration. DO NOT REMOVE!
+  vexcodeInit();
+  Drivetrain.driveFor(forward, 10, inches);
+  Drivetrain.setStopping(hold);
+  Drivetrain.setTimeout(5,seconds);
+  Drivetrain.turnFor(right, 187, degrees);
+  Drivetrain.setStopping(hold);
+  Drivetrain.setTimeout(5,seconds);
+  Drivetrain.driveFor(forward, 240, inches);
+  Drivetrain.setStopping(hold);
+  Drivetrain.setTimeout(8,seconds);
+  wait(1, seconds);
+  Drivetrain.driveFor(forward, 11, inches);
+  Drivetrain.driveFor(reverse, 20, inches);
+  Drivetrain.setStopping(hold);
+  Drivetrain.setTimeout(5,seconds);
+  Drivetrain.turnFor(left, 202, degrees);
+  Drivetrain.setStopping(hold);
+  Drivetrain.setTimeout(8,seconds);
+  wait(1, seconds);
+  Drivetrain.driveFor(reverse, 22, inches);
+  Drivetrain.setStopping(hold);
+  Drivetrain.setTimeout(5,seconds);
+
+
+}
